@@ -2,6 +2,8 @@
 
 Automatically changes the YouTube stream chat to "Live chat" for streamers.
 
+It works on Chrome and Edge (as far as I know).
+
 ## Installation
 
 1. Install NodeJS if you don't already have it: https://nodejs.org.
