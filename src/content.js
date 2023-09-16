@@ -1,12 +1,15 @@
-// chrome.runtime.onMessage.addListener(request => {
-//     // TODO: REMOVE
-//     console.log("CONTENT/isEnabled:", request.isEnabled)
-//     if (request.isEnabled) {
-//         switchToLiveChat()
-//     }
-// })
+chrome.storage.local.get().then(({ isEnabled }) => {
+    if (isEnabled) {
+        switchToLiveChat()
+    }
+})
 
-switchToLiveChat()
+// TODO: Maybe add try/catch?
+chrome.runtime.onMessage.addListener(({ isEnabled }) => {
+    if (isEnabled) {
+        switchToLiveChat()
+    }
+})
 
 function switchToLiveChat() {
     waitForQuerySelector("#chatframe", iframe => {

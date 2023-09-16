@@ -1,15 +1,20 @@
 const toggleInput = document.getElementById("isEnabled")
 
+chrome.storage.local.get().then(({ isEnabled }) => {
+    if (isEnabled) {
+        toggleInput.checked = true
+    }
+})
+
 toggleInput.addEventListener("change", e => {
     const isChecked = e.target.checked
 
     ;(async () => {
-        try {
-            const firstTab = await getCurrentTab()
-            const options = { isEnabled: isChecked }
-            await sendOptions(firstTab, options)
-        } catch {}
-        // TODO: Maybe this is a bad idea! ^^^
+        // TODO: Maybe add try/catch?
+        const firstTab = await getCurrentTab()
+        const options = { isEnabled: isChecked }
+        await sendOptions(firstTab, options)
+        await chrome.storage.local.set(options)
     })()
 })
 
