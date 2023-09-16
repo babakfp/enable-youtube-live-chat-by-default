@@ -14,5 +14,8 @@
             "js": ["src/content.js"]
         }
     ],
-    "short_name": "YT Live Chat"
+    "short_name": "YT Live Chat",
+    "icons": {
+        "128": "src/icon128.png"
+    }
 }
