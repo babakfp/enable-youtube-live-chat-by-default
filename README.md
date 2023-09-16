@@ -16,6 +16,10 @@ It works on Chrome and Edge (as far as I know).
 6. Toggle ON "Developer mode".
 7. Click "Load unpacked" to upload the package.
 
+## Report
+
+If there are any issues, feel free to create an issue.
+
 ## Resources
 
 -   https://developer.chrome.com/docs/extensions/
