@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .toggle-wrapper {
+        @apply flex items-center justify-between gap-2 rounded-full bg-gray-50 py-2 pl-4 pr-2 shadow-2xl;
+    }
+    .toggle-dot {
+        @apply h-2 w-2 rounded-full bg-gray-200 transition-colors;
+    }
+    .toggle-wrapper:has(input:checked) .toggle-dot {
+        @apply bg-blue-500 shadow-blue-500;
+    }
+    .toggle-label {
+        @apply text-xs font-medium text-gray-900;
+    }
+    .toggle-button {
+        @apply relative h-6 w-12 rounded-full bg-gray-200 p-1 shadow-xl transition-all;
+    }
+    .toggle-button input {
+        @apply sr-only;
+    }
+    .toggle-button:has(input:checked) {
+        @apply bg-blue-500 shadow-blue-500;
+    }
+    .toggle-circle {
+        @apply h-4 w-4 rounded-full bg-white transition-transform;
+    }
+    .toggle-circle:has(svg) {
+        @apply flex items-center justify-center;
+    }
+    .toggle-button:has(input:checked) .toggle-circle {
+        @apply translate-x-6;
+    }
+    .toggle-circle svg {
+        @apply h-2 w-2;
+    }
+    .toggle-circle .toggle-icon-on {
+        @apply hidden;
+    }
+    .toggle-button:has(input:checked) .toggle-icon-on {
+        @apply block;
+    }
+    .toggle-button:has(input:checked) .toggle-icon-off {
+        @apply hidden;
+    }
+}

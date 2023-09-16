@@ -1,7 +1,7 @@
 // chrome.runtime.onMessage.addListener(request => {
 //     // TODO: REMOVE
-//     console.log("CONTENT/toggleExtension:", request.toggleExtension)
-//     if (request.toggleExtension) {
+//     console.log("CONTENT/isEnabled:", request.isEnabled)
+//     if (request.isEnabled) {
 //         switchToLiveChat()
 //     }
 // })
@@ -16,7 +16,7 @@ function switchToLiveChat() {
             if (!triggerButton) return
             triggerButton.click()
             const liveChatButton = iframe.contentDocument.querySelector(
-                '#menu > a[aria-selected="false"]'
+                '#menu > a[aria-selected="false"]',
             )
             if (!liveChatButton) return
             liveChatButton.click()

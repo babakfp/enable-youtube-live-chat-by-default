@@ -1,12 +1,15 @@
-const toggleInput = document.getElementById("toggleExtension")
+const toggleInput = document.getElementById("isEnabled")
 
 toggleInput.addEventListener("change", e => {
     const isChecked = e.target.checked
 
     ;(async () => {
-        const firstTab = await getCurrentTab()
-        const options = { toggleExtension: isChecked }
-        await sendOptions(firstTab, options)
+        try {
+            const firstTab = await getCurrentTab()
+            const options = { isEnabled: isChecked }
+            await sendOptions(firstTab, options)
+        } catch {}
+        // TODO: Maybe this is a bad idea! ^^^
     })()
 })
 
