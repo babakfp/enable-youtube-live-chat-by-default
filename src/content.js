@@ -13,6 +13,14 @@ chrome.runtime.onMessage.addListener(({ isEnabled }) => {
     }
 })
 
+window.addEventListener("resize", () => {
+    chrome.storage.local.get().then(({ isEnabled }) => {
+        if (isEnabled) {
+            switchToLiveChat()
+        }
+    })
+})
+
 // Function to switch to Live Chat.
 function switchToLiveChat() {
     /** @type {HTMLIFrameElement | null} */
