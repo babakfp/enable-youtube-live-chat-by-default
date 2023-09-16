@@ -5,7 +5,6 @@ chrome.storage.local.get().then(({ isEnabled }) => {
     }
 })
 
-// TODO: Maybe add try/catch?
 // Listen for messages from the extension.
 chrome.runtime.onMessage.addListener(({ isEnabled }) => {
     if (isEnabled) {

@@ -19,7 +19,6 @@ toggleInput.addEventListener("change", e => {
     const isChecked = e.target.checked
 
     ;(async () => {
-        // TODO: Maybe add try/catch?
         // Get the current active tab.
         const firstTab = await getCurrentTab()
 
