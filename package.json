@@ -1,4 +1,5 @@
 {
+    "name": "change-youtube-live-chat-to-default",
     "scripts": {
         "postcss:popup:watch": "postcss src/popup.css -o src/popup.min.css --watch"
     },
