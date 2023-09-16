@@ -21,6 +21,7 @@ function switchToLiveChat() {
         fireClickActions(iframe)
     } else {
         waitForQuerySelector(
+            document.body,
             "#chatframe",
             /** @param {HTMLIFrameElement} iframe */ iframe => {
                 fireClickActions(iframe)
@@ -53,48 +54,37 @@ function fireClickActions(iframe) {
  * @param {Document} param0 - An object with a `contentDocument` property representing the document to interact with.
  */
 function clickToSwitch({ contentDocument: document }) {
-    if (isAlreadyOnLiveChat(document)) return
+    waitForQuerySelector(
+        document.body,
+        "#label-text",
+        /** @param {HTMLDivElement} labelElement */ labelElement => {
+            if (labelElement.textContent === "Live chat replay") return
 
-    const triggerButton = document.querySelector("#trigger")
-    if (!triggerButton) return
-    triggerButton.click()
+            const triggerButton = document.querySelector("#trigger")
+            if (!triggerButton) return
+            triggerButton.click()
 
-    const liveChatButton = document.querySelector("#menu > a:last-of-type")
-    if (!liveChatButton) return
-    liveChatButton.click()
-}
-
-/**
- * Checks if the chat is already on "Live chat replay" mode.
- * @param {Document} document - The document object.
- * @returns {boolean} True if on "Live chat replay" mode, false otherwise.
- */
-function isAlreadyOnLiveChat(document) {
-    return getDropdownButtonLabelTextContent(document) === "Live chat replay"
-}
-
-/**
- * Get the text content of the chat filter dropdown button.
- * @param {Document} document - The document object.
- * @returns {"Top chat replay" | "Live chat replay"} The text content of the dropdown button.
- */
-function getDropdownButtonLabelTextContent(document) {
-    /** @type {HTMLDivElement} */
-    const labelElement = document.querySelector("#label-text")
-    return labelElement.textContent
+            const liveChatButton = document.querySelector(
+                "#menu > a:last-of-type",
+            )
+            if (!liveChatButton) return
+            liveChatButton.click()
+        },
+    )
 }
 
 /**
  * Wait for a specified selector to become available in the DOM and execute a callback function when found.
+ * @param {Node | Element | HTMLBodyElement} target A DOM Node (which may be an Element) within the DOM tree to watch for changes, or to be the root of a subtree of nodes to be watched.
  * @param {string} selector - The CSS selector to wait for.
  * @param {(element: Element) => void} callback - The callback function to execute when the selector is found.
  */
-function waitForQuerySelector(selector, callback) {
+function waitForQuerySelector(target, selector, callback) {
     const observer = new MutationObserver(mutationsList => {
         for (const mutation of mutationsList) {
             // Check if the selector exists in the added nodes
             if (mutation.addedNodes.length > 0) {
-                const element = document.body.querySelector(selector)
+                const element = target.querySelector(selector)
                 if (element) {
                     // Selector found, call the callback function
                     callback(element)
@@ -108,5 +98,5 @@ function waitForQuerySelector(selector, callback) {
     })
 
     // Start observing for changes
-    observer.observe(document.body, { childList: true, subtree: true })
+    observer.observe(target, { childList: true, subtree: true })
 }
