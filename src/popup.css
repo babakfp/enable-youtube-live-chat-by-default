@@ -38,8 +38,11 @@
     .toggle-circle .toggle-icon-on {
         @apply hidden;
     }
+    .toggle-circle .toggle-icon-off {
+        @apply opacity-25;
+    }
     .toggle-button:has(input:checked) .toggle-icon-on {
-        @apply block;
+        @apply block text-blue-400;
     }
     .toggle-button:has(input:checked) .toggle-icon-off {
         @apply hidden;
