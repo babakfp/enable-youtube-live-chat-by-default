@@ -9,9 +9,11 @@
     .toggle-dot {
         @apply h-2 w-2 rounded-full bg-gray-200 transition-colors;
     }
-    .toggle-wrapper:has(input:checked) .toggle-dot {
-        @apply bg-blue-500 shadow-blue-500;
+    .toggle-wrapper:has(input:checked) .toggle-dot,
+    .toggle-button:has(input:checked) {
+        @apply bg-blue-400 shadow-blue-400;
     }
+
     .toggle-label {
         @apply text-xs font-medium text-gray-900;
     }
@@ -20,9 +22,6 @@
     }
     .toggle-button input {
         @apply sr-only;
-    }
-    .toggle-button:has(input:checked) {
-        @apply bg-blue-500 shadow-blue-500;
     }
     .toggle-circle {
         @apply h-4 w-4 rounded-full bg-white transition-transform;
