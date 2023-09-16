@@ -25,3 +25,4 @@ If there are any issues, feel free to create an issue.
 -   https://developer.chrome.com/docs/extensions/
 -   https://www.google.com/search?q=how+to+change+youtube+stream+top+message+to+default+to+all&oq=how+to+change+youtube+stream+top+message+to+default+to+all&aqs=chrome..69i57j33i160l2.10851j0j7&sourceid=chrome&ie=UTF-8
 -   https://www.reddit.com/r/youtube/comments/hhuz29/enable_live_chat_by_default_instead_of_top_chat/
+-   https://www.reddit.com/r/youtube/comments/16kiyz9/enable_live_chat_by_default_instead_of_top_chat/
