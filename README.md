@@ -5,12 +5,13 @@ Are you tired of repeatedly clicking on the "Live Chat" tab button? Do you occas
 ## Installation
 
 1. Install [Node](https://nodejs.org).
-2. Run `npm i -g pnpm`.
-3. Run `pnpm i`.
-4. Run `pnpm postcss:popup:watch`.
-5. In your browser go to the extensions page `chrome://extensions`.
-6. Enable the "Developer mode".
-7. Click "Load unpacked" to upload the package.
+2. Open project folder and:
+   1. Run `npm i -g pnpm`.
+   2. Run `pnpm i`.
+   3. Run `pnpm postcss:popup:watch`.
+3. In your browser go to the extensions page: `chrome://extensions`.
+4. Enable the "Developer mode".
+5. Click "Load unpacked" to upload the package.
 
 ## Report
 
