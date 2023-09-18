@@ -1,9 +1,9 @@
 {
     "manifest_version": 3,
-    "name": "Change YouTube Live Chat to Default",
+    "name": "Enable YouTube Live Chat by Default",
     "version": "1.0",
     "version_name": "1.0 beta",
-    "description": "Automatically changes the YouTube stream chat to \"Live chat\" for streamers.",
+    "description": "Automatically change the YouTube stream chat from the \"Top Chat\" to the \"Live Chat\".",
     "permissions": ["scripting", "activeTab", "storage"],
     "action": {
         "default_popup": "src/popup.html"
