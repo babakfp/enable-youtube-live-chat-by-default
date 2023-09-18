@@ -4,6 +4,9 @@
  * @property {boolean} isEnabled - Indicates whether the extension is enabled or disabled.
  */
 
+const YOUTUBE_URL_MATCH_REGEX =
+    /https:\/\/www\.youtube\.com\/watch\?v=[A-Za-z0-9_-]+/
+
 /** @type {HTMLInputElement} */
 const toggleInput = document.getElementById("isEnabled")
 
@@ -25,11 +28,14 @@ toggleInput.addEventListener("change", e => {
         // Create options object with the new state.
         const options = { isEnabled: isChecked }
 
-        // Send options to the content script.
-        sendOptions(firstTab, options)
-
         // Store the options in local storage.
         await chrome.storage.local.set(options)
+
+        // Step away if not on correct page
+        if (!firstTab.url.match(YOUTUBE_URL_MATCH_REGEX)) return
+
+        // Send options to the content script.
+        sendOptions(firstTab, options)
     })()
 })
 
