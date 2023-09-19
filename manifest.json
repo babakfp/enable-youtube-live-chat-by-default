@@ -17,5 +17,6 @@
     "short_name": "YT Live Chat",
     "icons": {
         "128": "src/icon128.png"
-    }
+    },
+    "homepage_url": "https://github.com/babakfp/enable-youtube-live-chat-by-default"
 }
