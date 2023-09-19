@@ -1,14 +1,18 @@
 # Change YouTube Live Chat to Default
 
-Are you tired of repeatedly clicking on the "Live Chat" tab button? Do you occasionally forget to click on it? This browser extension will automatically change the YouTube stream chat from the "Top Chat" to the "Live Chat". It is compatible with Chrome and Edge browsers, as far as my knowledge goes.
+This browser extension will **automatically** change YouTube stream chat from **Top chat** to **Live chat**. It is compatible with **Chrome**, **Edge**, and **Brave** browsers.
+
+## Download
+
+https://babakfp.gumroad.com/l/enable-youtube-live-chat-by-default
 
 ## Installation
 
 1. Install [Node](https://nodejs.org).
 2. Open project folder and:
-   1. Run `npm i -g pnpm`.
-   2. Run `pnpm i`.
-   3. Run `pnpm postcss:popup:watch`.
+    1. Run `npm i -g pnpm`.
+    2. Run `pnpm i`.
+    3. Run `pnpm postcss:popup:watch`.
 3. In your browser go to the extensions page: `chrome://extensions`.
 4. Enable the "Developer mode".
 5. Click "Load unpacked" to upload the package.

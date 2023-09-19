@@ -3,7 +3,7 @@
     "name": "Enable YouTube Live Chat by Default",
     "version": "1.0",
     "version_name": "1.0 beta",
-    "description": "Automatically change the YouTube stream chat from the \"Top Chat\" to the \"Live Chat\".",
+    "description": "Automatically change YouTube stream chat from Top chat to Live chat.",
     "permissions": ["scripting", "activeTab", "storage"],
     "action": {
         "default_popup": "src/popup.html"
