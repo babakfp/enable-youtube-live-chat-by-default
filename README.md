@@ -1,25 +1,32 @@
 # Change YouTube Live Chat to Default
 
-This browser extension will **automatically** change YouTube stream chat from **Top chat** to **Live chat**. It is compatible with **Chrome**, **Edge**, and **Brave** browsers.
+**Auto-Switch to "Live chat"**
 
-## Download
-
-https://babakfp.gumroad.com/l/enable-youtube-live-chat-by-default
+Install this browser extension to switch YouTube stream chat from "Top chat" to "Live chat" automatically. Tested and compatible with Chrome, Edge, and Brave browsers.
 
 ## Installation
 
-1. Install [Node](https://nodejs.org).
-2. Open the project folder and:
-    1. Run `npm i -g pnpm`.
-    2. Run `pnpm i`.
-    3. Run `pnpm postcss:popup:watch`.
-3. In your browser, go to the extensions page: `chrome://extensions`.
-4. Enable "Developer mode".
-5. Click on the "Load unpacked" button to select and upload the package.
+1. [Download the file](https://babakfp.gumroad.com/l/enable-youtube-live-chat-by-default).
+2. Unzip the file you just downloaded.
+3. Move the unzipped folder to a safe directory to avoid accidental deletion.
+4. Open your browser and go to the extensions page using one of the following methods:
+    - Type `chrome://extensions` in the URL bar.
+    - Navigate to "Extensions" > "Manage Extensions".
+5. Turn on "Developer mode".
+6. Click "Load unpacked" and choose the extension folder to load.
+7. That's it.
+
+## Development
+
+1. Install [NodeJS](https://nodejs.org).
+2. Open the project folder in your code editor.
+3. Run `npm i -g pnpm`.
+4. Run `pnpm i`.
+5. Run `postcss:popup:build` or `pnpm postcss:popup:watch`.
 
 ## Report
 
-If you encounter any problems, please don't hesitate to report them by creating an issue.
+Encountering problems? Report them by creating an [issue](https://github.com/babakfp/enable-youtube-live-chat-by-default/issues).
 
 ## Resources
 
