@@ -1,6 +1,7 @@
 {
     "license": "MIT",
     "scripts": {
+        "postcss:popup:build": "postcss src/popup.css -o src/popup.min.css",
         "postcss:popup:watch": "postcss src/popup.css -o src/popup.min.css --watch"
     },
     "devDependencies": {
