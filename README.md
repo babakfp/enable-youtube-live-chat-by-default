@@ -1,6 +1,6 @@
 # Change YouTube Live Chat to Default
 
-**Auto-Switch to "Live chat"**
+**Auto-Switch to Live Chat**
 
 Install this browser extension to switch YouTube stream chat from "Top chat" to "Live chat" automatically. Tested and compatible with Chrome, Edge, and Brave browsers.
 
