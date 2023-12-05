@@ -1,4 +1,4 @@
-# Change YouTube Live Chat to Default
+# Enable YouTube Live Chat by Default
 
 **Auto-Switch to Live Chat**
 
